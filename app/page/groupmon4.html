@@ -1,0 +1,47 @@
+<section class="page-form-ele page" ng-app="postingsApp" ng-controller="DashboardCtrl">
+	
+	 <div class="row ui-section">
+    <div class="col-lg-8 clearfix">
+        <h2 class="section-header"><a href="#/dashboard"><i class="zmdi zmdi-home"></i></a> Gruppenübersicht - beendet</h2>
+    </div>
+    <div class="col-md-12">
+		<input type="button" value="Neu" class="md-raised md-primary md-button" onclick="handleBtnClick(this.value)"></input>
+		<input type="button" value="Ändern" class="md-raised md-primary md-button" onclick="handleBtnClick(this.value)"></input>
+		<input type="button" value="Anzeigen" class="md-raised md-primary md-button" onclick="handleBtnClick(this.value)"></input>
+		<input type="button" value="Archivieren" class="md-raised md-primary md-button" onclick="handleBtnClick(this.value)"></input>
+		<input type="button" value="Löschen" class="md-raised md-primary md-button" onclick="handleBtnClick(this.value)"></input>
+		<md-button class="md-raised btn-w-md md-primary"><span data-translate="STMB"></span></md-button>
+		<input type="button" value="Brief 1" class="md-raised md-primary md-button" onclick="handleBtnClick(this.value)"></input>
+		<input type="button" value="Brief 2" class="md-raised md-primary md-button" onclick="handleBtnClick(this.value)"></input>
+		<!--<div class="divider" style="margin-right: 10px; margin-left:10px;"></div>divider-lg-->
+		<input type="text" class="" id="search" onkeyup="searchTable()" placeholder="Suche.."></input><span class="icon fa fa-search" ></span>
+		<div class="divider divider-dashed  pull-in"></div>
+        <section class="panel panel-default table-dynamic">
+        	<div id="datatable">
+				<table id="datamonitor" class="table table-responsive table-bordered table-striped cf no-margin">
+					<thead class="cf">
+				<tr>
+					<th></th>
+					<th><span class="thsort">#</span></th>
+					<th><span class="thsort">Name</span></th>
+					<th><span class="thsort">Vorname</span></th>
+					<th><span class="thsort">Status</span></th>
+					<th><span class="thsort">Kindname</span></th>
+					<th><span class="thsort">Geburtstag</span></th>
+					<th><span class="thsort">Zahlungsart</span></th>
+				</tr>
+					</thead>
+					<tbody id="tblcontent">
+						<!-- content being injected by jQuery -->
+					</tbody>
+				</table>
+				<script>
+					loadGOV("ST4");
+				</script>
+			</div>
+        </section>
+    </div>
+    </div>
+	<script src="scripts/adrstmb.js"></script>
+
+</section>

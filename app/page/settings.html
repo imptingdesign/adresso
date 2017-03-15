@@ -1,0 +1,29 @@
+<section class="page-form-ele page" ng-app="postingsApp" ng-controller="PostingsCtrl">
+	
+	<div class="row ui-section">
+		<div class="col-lg-8 clearfix">
+			<h2 class="section-header"><a href="#/dashboard"><i class="zmdi zmdi-home"></i></a> Einstellungen</h2>
+		</div>
+		<div class="col-md-12">
+			<section class="panel panel-default table-dynamic">
+					<div id="datatable">
+						<table id="datamonitor" class="table table-responsive table-bordered table-striped cf no-margin">
+							<thead class="cf">
+								<tr>
+									<td>Einstellung</td>
+									<td>Wert</td>
+								</tr>
+							</thead>
+							<tbody id="tblcontent">
+								<!-- content being injected by jQuery -->
+							</tbody>
+						</table>
+				<script>
+					displaySettings();
+				</script>
+				</div>
+			</section>
+		</div>
+    </div>
+	<script src="scripts/adrstmb.js"></script>
+</section>

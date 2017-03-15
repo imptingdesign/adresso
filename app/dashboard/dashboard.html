@@ -1,0 +1,97 @@
+<div class="page page-dashboard" data-ng-controller="DashboardCtrl">
+
+    <div class="col-lg-8 clearfix">
+        <h2 class="section-header">Dashboard</h2>
+    </div>
+
+    <div class="col-md-12">
+
+        <div class="row">
+
+            <div class="col-lg-3 col-xsm-6">
+                <div class="panel panel-box">
+                    <div class="panel-top">
+                        <span class="zmdi zmdi-account-add color-primary"></span>
+                    </div>
+					 <a href="#/page/create"> <md-button class="md-raised btn-w-md md-primary"><span data-translate="NEUES_STAMMBLATT"></span>  </md-button></a><div class="divider"></div>
+                </div>
+            </div>
+			
+          <div class="col-lg-3 col-xsm-6">
+                <div class="panel panel-box">
+                    <div class="panel-top">
+                        <span class="zmdi zmdi-accounts color-primary"></span>
+                    </div>
+					<a href="#/page/monitor"> <md-button class="md-raised btn-w-md md-primary"><span data-translate="GESAMTÜBERSICHT"></span>  </md-button></a><div class="divider"></div>
+                </div>
+            </div>
+			
+			<div class="col-lg-3 col-xsm-6">
+                <div class="panel panel-box">
+                    <div class="panel-top">
+                        <span class="zmdi zmdi-apps color-primary"></span>
+                    </div>
+					<a href="#/page/groupoverview"> <md-button class="md-raised btn-w-md md-primary"><span data-translate="GRUPPENÜBERSICHT"></span>  </md-button></a><div class="divider"></div>
+                </div>
+            </div>
+     
+		<div class="col-lg-3 col-xsm-6">
+			<div class="panel panel-box">
+				<div class="panel-top">
+					<span class="zmdi zmdi-folder-shared color-primary"></span>
+				</div>
+				<md-button class="md-raised btn-w-md md-primary" value = "SELECT atwrt FROM adr_stmb_cst WHERE atnam = 'STMB_VZ_PDF'" onclick="openExp(this.value)"><span data-translate="VERZEICHNIS"></span></md-button>
+				<div class="divider"></div>
+			</div>
+		</div>
+	</div> <!--end 1st row-->
+		
+		<div class="row">
+			<div class="col-lg-3 col-xsm-6">
+                <div class="panel panel-box">
+                    <div class="panel-top">
+                        <span class="zmdi zmdi-settings color-primary"></span>
+                    </div>
+					<a href="#/page/settings"> <md-button class="md-raised btn-w-md md-primary"><span data-translate="EINSTELLUNGEN"></span>  </md-button></a><div class="divider"></div>
+                </div>
+            </div>	
+		<!--<div class="col-lg-3 col-xsm-6">
+                <div class="panel panel-box">
+                    <div class="panel-top">
+                        <span class="fa fa-sliders color-disabled"></span>
+                    </div>
+					<a href="#/" target="_blank" title="Diese Funktion ist in Ihrer Version nicht verfügbar"> <md-button ng-disabled="true" class="md-raised btn-w-md md-primary"><span data-translate="Einstellungen"></span>  </md-button></a><div class="divider"></div>
+                </div>
+            </div>-->
+		
+            <div class="col-lg-3 col-xsm-6">
+                <div class="panel panel-box">
+                    <div class="panel-top">
+                        <span class="fa fa-book color-primary"></span>
+                    </div>
+					<a href="app/files/handbuch.pdf" target="_blank" title="Handbuch öffnen"> <md-button class="md-raised btn-w-md md-primary"><span data-translate="Handbuch"></span>  </md-button></a><div class="divider"></div>
+                </div>
+            </div>
+			
+			<div class="col-lg-3 col-xsm-6">
+                <div class="panel panel-box">
+                    <div class="panel-top">
+                        <span class="fa fa-envelope-o color-primary"></span>
+                    </div>
+					<a href="mailto:support@impting.de?subject=Toolize - Softwareanfrage"> <md-button class="md-raised btn-w-md md-primary"><span data-translate="Support"></span>  </md-button></a><div class="divider"></div>
+                </div>
+            </div>
+			
+			<div class="col-lg-3 col-xsm-6">
+                <div class="panel panel-box">
+                    <div class="panel-top">
+                        <span class="fa fa-globe color-primary"></span>
+                    </div>
+					<a href="http://www.impting.de" target="_blank" title="Herstellerseite öffnen"> <md-button class="md-raised btn-w-md md-primary"><span data-translate="Hersteller"></span>  </md-button></a><div class="divider"></div>
+                </div>
+            </div>
+
+        </div>
+		
+    </div>
+</div>

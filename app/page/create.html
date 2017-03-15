@@ -1,0 +1,193 @@
+
+<section class="page-form-ele page" ng-controller="FormCtrl">
+
+    <div class="row ui-section">
+        <div class="col-lg-8 clearfix">
+          
+		  <h2 class="section-header"><a href="#/dashboard"><i class="zmdi zmdi-home"></i></a> Stammblatt anlegen</h2>
+        </div>
+		   <div class="col-md-12">
+            <div class="panel panel-default" data-ng-controller="FormConstraintsCtrl">
+                <div class="panel-body">
+                    <form name="form_constraints" id="form_create" class="form-validation" novalidate data-ng-submit="submitForm()">
+              					  
+					  <div class="form-group">
+                            <label for="" class="col-sm-2">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="name" class="form-control" required data-ng-model="form.required_input_name">
+								</br>
+                            </div>
+                        </div>
+
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Vorname</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="vorname" class="form-control" required data-ng-model="form.required_input_vorname">
+								</br>
+                            </div>
+                        </div>
+						
+					<div class="form-group">
+						<label for="" class="col-sm-2">Geschlecht</label>
+							<input type="radio" name="gender" value="female" id="optfemale" class="" onchange="setSalutation(this.value)" checked>Frau</input>
+							<input type="radio" name="gender" value="male" id="optmale" class="" onchange="setSalutation(this.value)" >Mann</input>
+							<input type="radio" name="gender" value="family" id="optfamily" class="" onchange="setSalutation(this.value)">Familie</input>
+							</br>
+					</div>
+                   
+										
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Anschrift</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="strasse" class="form-control" placeholder="Strasse & Hausnummer" data-ng-model="form.required_input_strasse">
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2"></label>
+                            <div class="col-sm-10">
+                                <input type="text" id="ort" class="form-control" placeholder="Postleitzahl & Ort" data-ng-model="form.required_input_ort">
+								</br>
+                            </div>
+                        </div>		
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Status</label>
+                            <div class="col-sm-10">
+								<select id="status" class="md-select-value">
+									<option value="ST1">Voranmeldung</option>
+									<option value="ST2">Verbindliche Anmeldung</option>
+									<option value="ST3">laufend</option>
+									<option value="ST4">beendet</option>
+								</select>
+									</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Name (Kind)</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="kind" class="form-control" data-ng-model="form.required_input_kind">
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Geburtstag (Kind)</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="geburtstag" class="form-control" data-ng-model="form.required_input_geburtstag">
+								</br>
+                            </div>
+                        </div>
+
+						<div class="form-group">
+                            <label for="" class="col-sm-2">geplante Aufnahme</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="plaufnahme" class="form-control" data-ng-model="form.required_input_plaufnahme">
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Bemerkung</label>
+                            <div class="col-sm-10">
+                                <textarea rows="4" cols="50" maxlength="300" class="form-control" id="bemerkung" style="resize: none !important;"></textarea>
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Bankkonto</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="bankkonto" class="form-control" data-ng-model="form.required_input_bankkonto">
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">BLZ</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="blz" class="form-control" data-ng-model="form.required_input_blz">
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">IBAN</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="iban" class="form-control" data-ng-model="form.required_input_iban">
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Zahlungsart</label>
+                            <div class="col-sm-10">
+                                <select id="zahlungsart" class="md-select-value">
+									<option value="Rechnung">Rechnung</option>
+									<option value="Abbuchung">Abbuchung</option>
+									<option value="Dauerauftrag">Dauerauftrag</option>
+								</select>
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Briefanrede</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="briefanrede" class="form-control" disabled data-ng-model="form.required_input_briefanrede">
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Telefon</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="telefon" class="form-control" data-ng-model="form.required_input_telefon">
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Fax</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="fax" class="form-control" data-ng-model="form.required_input_fax">
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">E-Mail</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="email" class="form-control" data-ng-model="form.required_input_email">
+								</br>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="" class="col-sm-2">Handy</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="handy" class="form-control" data-ng-model="form.required_input_handy">
+								</br>
+                            </div>
+                        </div>
+						
+						<input type="button" 
+								value="Speichern"
+								ui-wave class="md-raised btn-lg md-primary md-button"
+								data-ng-disabled="!canSubmit()" 
+								onclick="setSTMB()"
+								></input>
+                    </form>
+					
+                </div>
+				<div id="message_con" class=""></div>
+            </div>
+        </div>
+				
+    </div>
+	<!-- JQUERY libraries -->
+	<script src="scripts/jquery.3.1.1.min.js"></script>	
+	<script> document.getElementById("briefanrede").value = "Sehr geehrte Frau"; </script>
+</section>
